@@ -22,26 +22,23 @@ export default function Contact() {
 
   function handleSubmit(e) {
     e.preventDefault();
-  
-    // Reset error message
     const form = e.target;
     const errorElement = form.querySelector('.error-message');
     if (errorElement) {
       errorElement.textContent = '';
     }
-  
+
+    // Validate form fields
     if (
       formData.Name === "" ||
       formData.Email === "" ||
       formData.Phone === "" ||
       formData.Message === ""
     ) {
-      // If any required field is empty, prevent form submission
-      // and display the error message
       return setError("Please fill out all fields.");
     }
-  
-    // If all fields are filled, proceed with form submission
+
+    // Submit form data
     fetch(
       "https://script.google.com/macros/s/AKfycbzC680myBD_Y72QCkXB4nutb4HJNG0BJLjFJmY24ZKlij5WnZpYU7RR0bNgrjEJ-HhwXg/exec",
       {
@@ -56,19 +53,18 @@ export default function Contact() {
         return res.text(); // Get response as text
       })
       .then((data) => {
-        console.log(data); // Log the response
+        console.log(data);
         setSubmitted(true);
       })
       .catch((error) => {
         console.error(error);
         setError("An error occurred while submitting the form. Please try again later.");
       });
-  
+
     form.reset();
     setFormData({ Name: "", Email: "", Phone: "", Message: "" });
   }
-  
-  
+
   function handleChange(e) {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   }

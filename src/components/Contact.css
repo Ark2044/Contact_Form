@@ -6,7 +6,6 @@
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
 }
 
 .contact-heading {
@@ -15,10 +14,6 @@
   color: #333;
   font-size: 28px;
   font-weight: 700;
-  text-transform: uppercase;
-  background: linear-gradient(to right, #5bc0de, #328cce); /* Gradient background for heading */
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 
 .contact-form {
@@ -32,7 +27,6 @@
   padding: 15px;
   border-radius: 8px;
   font-size: 18px;
-  transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
 .input-field:focus {
@@ -48,8 +42,6 @@
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   font-size: 18px;
   font-weight: 700;
 }
@@ -57,6 +49,16 @@
 .submit-button:hover {
   background-color: #328cce;
   transform: translateY(-3px) scale(1.05);
+}
+
+.input-field.error {
+  border: 2px solid #ff0000;
+}
+
+.error-message {
+  color: #ff0000;
+  font-size: 14px;
+  text-align: center;
 }
 
 /* Additional visual effects */
@@ -87,11 +89,17 @@
 
 /* Hover effects */
 .input-field:hover {
-  box-shadow: 0 0 10px rgba(91, 192, 222, 0.8); /* Updated hover effect */
+  box-shadow: 0 0 10px rgba(91, 192, 222, 0.8);
 }
 
 .submit-button:hover {
   background-color: #328cce;
   transform: translateY(-3px) scale(1.05);
-  box-shadow: 0 8px 20px rgba(91, 192, 222, 0.4); /* Updated hover effect */
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 600px) {
+  .contact-container {
+    padding: 20px;
+  }
 }
