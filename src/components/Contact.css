@@ -1,0 +1,97 @@
+/* Contact.css */
+.contact-container {
+  max-width: 500px;
+  margin: auto;
+  padding: 40px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.contact-heading {
+  margin-bottom: 30px;
+  text-align: center;
+  color: #333;
+  font-size: 28px;
+  font-weight: 700;
+  text-transform: uppercase;
+  background: linear-gradient(to right, #5bc0de, #328cce); /* Gradient background for heading */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.contact-form {
+  display: grid;
+  grid-gap: 20px;
+}
+
+.input-field {
+  background-color: #f9f9f9;
+  border: none;
+  padding: 15px;
+  border-radius: 8px;
+  font-size: 18px;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.input-field:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px #5bc0de;
+  transform: translateY(-2px);
+}
+
+.submit-button {
+  background-color: #5bc0de;
+  color: #fff;
+  padding: 15px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.submit-button:hover {
+  background-color: #328cce;
+  transform: translateY(-3px) scale(1.05);
+}
+
+/* Additional visual effects */
+.contact-heading::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: #5bc0de;
+  margin-top: 10px;
+  border-radius: 2px;
+}
+
+.contact-form {
+  animation: fadeInUp 1s ease forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Hover effects */
+.input-field:hover {
+  box-shadow: 0 0 10px rgba(91, 192, 222, 0.8); /* Updated hover effect */
+}
+
+.submit-button:hover {
+  background-color: #328cce;
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 8px 20px rgba(91, 192, 222, 0.4); /* Updated hover effect */
+}

@@ -1,0 +1,14 @@
+/* App.css */
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(to bottom, #f8f8f8, #eaeaea); /* Gradient background */
+}
+
+/* App container */
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
